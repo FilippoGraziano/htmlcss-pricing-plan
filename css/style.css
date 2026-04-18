@@ -13,8 +13,10 @@ html{
     font-family: sans-serif;
 }
 
-body{
-    background-color: lightgray;
+.subtitle{
+    font-size: 14px;
+    display: block;
+    font-weight: normal;
 }
 
 /* utilities */
@@ -25,14 +27,34 @@ body{
 }
 
 .transparent{
-    color: #0000005c;
+    color: #00000091;
+}
+
+/* header */
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 30px;
+}
+
+header > div{
+    display: inline;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+h1{
+    display: inline-block;
+    font-size: 40px;
+    max-width: 662px;
+}
+
+.monthly, .yearly{
+    display: inline;
 }
 
 /* main */
-
-section > p{
-    font-size: 14px;
-}
 
 .text-align{
     text-align: center;
@@ -63,8 +85,8 @@ strong {
     color: black;
 }
 
-.px45{
-    font-size: 45px;
+.larger-font{
+    font-size: 60px;
 }
 
 .label{
@@ -90,5 +112,6 @@ i{
     margin: 40px 30px 20px 30px;
     padding: 50px 40px;
     border-radius: 20px;
+    box-shadow: 0px 0px 16px 6px #00000014;
 }
 
