@@ -30,6 +30,14 @@ html{
     color: #00000091;
 }
 
+.fblack{
+    color: black;
+}
+
+.fwhite{
+    color: white;
+}
+
 /* header */
 
 header{
@@ -50,14 +58,67 @@ h1{
     max-width: 662px;
 }
 
-.monthly, .yearly{
+header label{
     display: inline;
+    padding-right: 10px;
+}
+
+.toggle-container{
+    cursor: pointer;
+    font-family: sans-serif;
+    color: #666;
+}
+
+/* background toogle */
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    vertical-align: bottom;
+}
+
+/* white toogle */
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    top: 50%;
+    left: -2px;
+    transform: translateY(-50%);
+    transition: translate 0.3s;
+}
+
+/* Animation when the toggle is clicked */
+
+input[type="checkbox"]:checked::before {
+    transform: translate(12px, -50%);
+    background-color: white;
+    border: 2px solid black;
+}
+
+input[type="checkbox"]:checked {
+    background-color: black;
+    border: 2px solid black;
 }
 
 /* main */
 
 .text-align{
     text-align: center;
+}
+
+h2{
+    font-size: 30px;
 }
 
 ul{
@@ -78,6 +139,7 @@ a{
     background-color: #6500FF;
     padding: 20px;
     border-radius: 20px;
+    font-weight: 600;
 }
 
 strong {
@@ -92,7 +154,6 @@ strong {
 .label{
     display: block;
     padding: 30px 0;
-    color: black;
 }
 
 .discount{
@@ -115,3 +176,15 @@ i{
     box-shadow: 0px 0px 16px 6px #00000014;
 }
 
+/* card professional */
+
+
+#professional{
+    color: white;
+    background-color: #6500FF;
+}
+
+#professional a{
+    background-color: white;
+    color: #6500FF;
+}
