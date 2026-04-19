@@ -23,7 +23,8 @@ html{
 
 .container{
     margin: 0 auto;
-    max-width: 1080px;
+    max-width: 1300px;
+    padding: 0 40px;
 }
 
 .transparent{
@@ -43,13 +44,7 @@ html{
 header{
     display: flex;
     flex-wrap: wrap;
-    margin: 40px 30px;
-}
-
-header > div{
-    display: inline;
-    margin-left: auto;
-    margin-top: 20px;
+    margin: 40px 0px;
 }
 
 h1{
@@ -63,10 +58,23 @@ header label{
     padding-right: 10px;
 }
 
+#toggles-button{
+    display: inline;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
 .toggle-container{
     cursor: pointer;
     font-family: sans-serif;
     color: #666;
+}
+
+@media screen and (min-width: 950px) {
+    #toggles-button{
+        margin: 0;
+        margin-left: auto;
+    }
 }
 
 /* background toogle */
@@ -112,6 +120,16 @@ input[type="checkbox"]:checked {
 }
 
 /* main */
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section > div{
+    margin-top: 20px;
+}
 
 .text-align{
     text-align: center;
@@ -170,10 +188,35 @@ i{
 
 .card{
     background-color: white;
-    margin: 40px 30px 20px 30px;
+    margin-bottom: 20px;
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0px 0px 16px 6px #00000014;
+    flex-basis: calc(1300px / 3 - 40px);
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 900px) {
+    #ultimate ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #ultimate li{
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    #ultimate ul{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    #professional{
+        order: -1;
+    }
 }
 
 /* card professional */
